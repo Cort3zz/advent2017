@@ -13,9 +13,8 @@ public class LoginFilter implements Filter {
         if (request.getParameter("user").equals("admin") && request.getParameter("password").equals("123")) {
             chain.doFilter(request, response);
         } else {
-            request.getRequestDispatcher("wrong.jsp").include(request, response);
+            request.getRequestDispatcher("indexWithError.html").include(request, response);
 
-            request.getRequestDispatcher("WEB-INF/index.html").include(request, response);
 
         }
     }

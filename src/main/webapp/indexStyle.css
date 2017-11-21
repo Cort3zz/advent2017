@@ -401,5 +401,11 @@ p.copy a:hover {
 h1, .copy {
     visibility: hidden;
 }
+.error{
+    font-size: 150%;
+    color: #ff3366;
+    position: relative;
+    top:110px;
 
+}
 /*--media quiries end here--*/
