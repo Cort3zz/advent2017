@@ -1,0 +1,182 @@
+
+body{
+    background-color: #f2e5ae;
+}
+
+
+#a15 {
+    position: absolute;
+    left: 334px;
+    top: 153px;
+    z-index: +1;
+}
+
+#a9 {
+    position: absolute;
+    left: 334px;
+    top: 233px;
+    z-index: +1;
+}
+
+#a1 {
+    position: absolute;
+    left: 334px;
+    top: 313px;
+    z-index: +1;
+}
+
+#a12 {
+    position: absolute;
+    left: 334px;
+    top: 393px;
+    z-index: +1;
+}
+
+#a4 {
+    position: absolute;
+    left: 334px;
+    top: 473px;
+    z-index: +1;
+}
+
+#a22 {
+    position: absolute;
+    left: 334px;
+    top: 553px;
+    z-index: +1;
+}
+
+#a8 {
+    position: absolute;
+    left: 414px;
+    top: 633px;
+    z-index: +1;
+}
+
+#a14 {
+    position: absolute;
+    left: 494px;
+    top: 633px;
+    z-index: +1;
+}
+
+#a16 {
+    position: absolute;
+    left: 574px;
+    top: 633px;
+    z-index: +1;
+}
+
+#a3 {
+    position: absolute;
+    left: 654px;
+    top: 633px;
+    z-index: +1;
+}
+
+#a7 {
+    position: absolute;
+    left: 734px;
+    top: 633px;
+    z-index: +1;
+}
+
+#a13 {
+    position: absolute;
+    left: 814px;
+    top: 633px;
+    z-index: +1;
+}
+
+#a10 {
+    position: absolute;
+    left: 894px;
+    top: 153px;
+    z-index: +1;
+}
+
+#a17 {
+    position: absolute;
+    left: 894px;
+    top: 233px;
+    z-index: +1;
+}
+
+#a5 {
+    position: absolute;
+    left: 894px;
+    top: 313px;
+    z-index: +1;
+}
+
+#a11 {
+    position: absolute;
+    left: 894px;
+    top: 393px;
+    z-index: +1;
+}
+
+#a21 {
+    position: absolute;
+    left: 894px;
+    top: 473px;
+    z-index: +1;
+}
+
+#a18 {
+    position: absolute;
+    left: 894px;
+    top: 553px;
+    z-index: +1;
+}
+
+#a24 {
+    position: absolute;
+    left: 414px;
+    top: 73px;
+    z-index: +1;
+}
+
+#a6 {
+    position: absolute;
+    left: 494px;
+    top: 73px;
+    z-index: +1;
+}
+
+#a19 {
+    position: absolute;
+    left: 574px;
+    top: 73px;
+    z-index: +1;
+}
+
+#a23 {
+    position: absolute;
+    left: 654px;
+    top: 73px;
+    z-index: +1;
+}
+
+#a2 {
+    position: absolute;
+    left: 734px;
+    top: 73px;
+    z-index: +1;
+}
+
+#a20 {
+    position: absolute;
+    left: 814px;
+    top: 73px;
+    z-index: +1;
+}
+.tabli {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ff3366;
+}
