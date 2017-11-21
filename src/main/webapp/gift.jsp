@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Norbi
-  Date: 2017. 11. 21.
-  Time: 22:18
-  To change this template use File | Settings | File Templates.
---%>
+<!DOCTYPE HTML>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="giftStyle.css">
 <html>

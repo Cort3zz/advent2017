@@ -22,7 +22,7 @@ public class MessageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String dailyPass = request.getParameter("dailypass");
         if (days.get(day).equals(dailyPass)) {
-            System.out.println("trololo");
+            request.getRequestDispatcher("gift.jsp").include(request, response);
         }else {
             request.getRequestDispatcher("messageLoginWithError.html").include(request, response);
         }
