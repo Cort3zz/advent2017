@@ -15,7 +15,7 @@ public class LoginFilter implements Filter {
         } else {
             request.getRequestDispatcher("wrong.jsp").include(request, response);
 
-            request.getRequestDispatcher("index.html").include(request, response);
+            request.getRequestDispatcher("WEB-INF/index.html").include(request, response);
 
         }
     }
