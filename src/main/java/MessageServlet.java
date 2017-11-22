@@ -17,12 +17,17 @@ public class MessageServlet extends HttpServlet {
     static {
         days.put(1, "ASD");
         days.put(2, "SDF");
+        dailyMessage.add("<h2>Első üzenet</h2> <p>Nagyon jó, hogy be tudom tolni arrayListből a sztinger!!</p>");
+        dailyMessage.add("<h2>Második üzenet</h2> <p>Szeretem a for loopot</p>");
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String dailyPass = request.getParameter("dailypass");
         if (days.get(day).equals(dailyPass)) {
-            request.getRequestDispatcher("gift.jsp").include(request, response);
+            response.setContentType("text/html; charset=UTF-8");
+            response.setCharacterEncoding("UTF-8");
+            request.setAttribute("dailyMessage",dailyMessage.get(day-1));
+            request.getRequestDispatcher("/gifts/gift.jsp").include(request, response);
         }else {
             request.getRequestDispatcher("messageLoginWithError.html").include(request, response);
         }
