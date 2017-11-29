@@ -24,7 +24,7 @@ public class JDBC {
 
         {
 
-            String sql = "CREATE TABLE IF NOT EXISTS adventlog.log" +
+            String sql = "CREATE TABLE IF NOT EXISTS drhp6e2pfd5ng.log" +
                     " (log VARCHAR(255));";
 
             stmt.execute(sql);
