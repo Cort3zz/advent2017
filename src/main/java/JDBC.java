@@ -2,15 +2,13 @@ import java.sql.*;
 
 public class JDBC {
 
-    public static void main(String[] args) {
-        addLog("booooyaaaa");
-    }
+
 
     static final String JDBC_DRIVER = "org.postgresql.Driver";
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/adventlog";
+    static final String DB_URL = "jdbc:postgresql://wcydfihkdzncoo:3143fc315b0462594a5ed74f7d2fc682258ab247a77f86de8d287fec6dc97423@ec2-184-72-255-211.compute-1.amazonaws.com:5432/drhp6e2pfd5ng";
 
-    static final String USER = "postgres";
-    static final String PASS = "test1234";
+    static final String USER = "wcydfihkdzncoo";
+    static final String PASS = "3143fc315b0462594a5ed74f7d2fc682258ab247a77f86de8d287fec6dc97423";
 
     public static void addLog(String log) {
 
