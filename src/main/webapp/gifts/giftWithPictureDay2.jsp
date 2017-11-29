@@ -1,14 +1,13 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<link rel="stylesheet" href="/gifts/giftStyle.css">
+<link rel="stylesheet" href="/gifts/giftWithPictureStyle.css">
 <html>
 <head>
     <title>Ajándék</title>
 
 </head>
 <body>
-<h1>Kattintsd az ajándékdobozra a napi meglepetésért!</h1>
+<h1>Kattintsd az ajándékdobozra a napi ajándékodért!</h1>
 <div class="box">
     <a class="button" href="#popup1"><img src="/gifts/gift.png" height="400" width="400"></a>
 </div>
@@ -18,7 +17,7 @@
         <h2 align="center">Napi cukiság</h2>
         <a class="close" href="#">&times;</a>
         <div class="content">
-            ${dailyMessage}
+           <img src="/gifts/gift1.jpg">
         </div>
     </div>
 </div>

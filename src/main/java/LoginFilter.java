@@ -1,3 +1,5 @@
+import sun.rmi.runtime.Log;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
@@ -10,6 +12,7 @@ public class LoginFilter implements Filter {
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
+
         if (request.getParameter("user").equals("admin") && request.getParameter("password").equals("123")) {
             chain.doFilter(request, response);
         } else {
