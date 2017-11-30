@@ -4,11 +4,11 @@ public class JDBC {
 
 
 
-    static final String JDBC_DRIVER = "org.postgresql.Driver";
-    static final String DB_URL = "postgres://wcydfihkdzncoo:3143fc315b0462594a5ed74f7d2fc682258ab247a77f86de8d287fec6dc97423@ec2-184-72-255-211.compute-1.amazonaws.com:5432/drhp6e2pfd5ng";
+    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    static final String DB_URL = "jdbc:mysql://den1.mysql2.gear.host:3306/adventlog";
 
-    static final String USER = "wcydfihkdzncoo";
-    static final String PASS = "3143fc315b0462594a5ed74f7d2fc682258ab247a77f86de8d287fec6dc97423";
+    static final String USER = "adventlog";
+    static final String PASS = "Pe180g_lc5-3";
 
     public static void addLog(String log) {
 
@@ -24,12 +24,12 @@ public class JDBC {
 
         {
 
-            String sql = "CREATE TABLE IF NOT EXISTS drhp6e2pfd5ng.log" +
+           String sql = "CREATE TABLE IF NOT EXISTS logs" +
                     " (log VARCHAR(255));";
 
             stmt.execute(sql);
 
-            sql = "INSERT INTO adventlog.log" +
+            sql = "INSERT INTO logs" +
                     " VALUES ('" + log + "')";
             stmt.executeUpdate(sql);
 
