@@ -72,7 +72,7 @@ public class MessageServlet extends HttpServlet {
         String userPassword = request.getParameter("dailypass");
 
         if (dailyPassword.get(day).equals(userPassword)) {
-            JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to get gift from: " + day + " : SUCCES");
+            JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to get gift from: " + day + " : SUCCES","dailyCodeLog");
             response.setContentType("text/html; charset=UTF-8");
             response.setCharacterEncoding("UTF-8");
 
@@ -83,7 +83,7 @@ public class MessageServlet extends HttpServlet {
             request.setAttribute("dailyMessage", dailyMessage.get(day-1));
             request.getRequestDispatcher("/gifts/gift.jsp").include(request, response);
         }else {
-            JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to get gift from: " + day + " : FAILED    The wrong password was: " + userPassword);
+            JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to get gift from: " + day + " : FAILED    The wrong password was: " + userPassword,"dailyCodeLog");
             request.getRequestDispatcher("messageLoginWithError.html").include(request, response);
         }
     }

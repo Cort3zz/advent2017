@@ -10,7 +10,7 @@ public class JDBC {
     static final String USER = "adventlog";
     static final String PASS = "Pe180g_lc5-3";
 
-    public static void addLog(String log) {
+    public static void addLog(String log, String table) {
 
         try {
             Class.forName(JDBC_DRIVER);
@@ -24,12 +24,12 @@ public class JDBC {
 
         {
 
-           String sql = "CREATE TABLE IF NOT EXISTS logs" +
+           String sql = "CREATE TABLE IF NOT EXISTS " +table +
                     " (log VARCHAR(255));";
 
             stmt.execute(sql);
 
-            sql = "INSERT INTO logs" +
+            sql = "INSERT INTO " +table +
                     " VALUES ('" + log + "')";
             stmt.executeUpdate(sql);
 
