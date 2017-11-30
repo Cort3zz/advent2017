@@ -18,7 +18,7 @@ public class LoginFilter implements Filter {
             JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to log in: SUCCES","logInLog");
             chain.doFilter(request, response);
         } else {
-            JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to log in: FAILED","logInLog");
+            JDBC.addLog("" + LocalDateTime.now() + "   Somebody tryed to log in: FAILED Wrong user and pass: " +request.getParameter("user") + " " + request.getParameter("password"),"logInLog");
 
             request.getRequestDispatcher("indexWithError.html").include(request, response);
 
