@@ -3,9 +3,6 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class JDBC {
-    public static void main(String[] args) {
-        System.out.println(getDate());
-    }
 
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";

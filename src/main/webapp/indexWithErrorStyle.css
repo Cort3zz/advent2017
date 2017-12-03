@@ -115,7 +115,7 @@ img {
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
-    background: center url("indexBackgGround.jpg") no-repeat;
+    background: center url(indexBackgGround.jpg) no-repeat;
     background-size: contain;
 
 }
@@ -402,10 +402,20 @@ h1, .copy {
     visibility: hidden;
 }
 .error{
-    font-size: 150%;
+    font-size: 170%;
     color: #ff3366;
     position: relative;
-    top:110px;
+    top:50px;
 
 }
+
+.box {
+    position: relative;
+    top:-70px;
+    text-align: center;
+}
+
+
+
+
 /*--media quiries end here--*/
