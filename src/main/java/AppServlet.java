@@ -15,6 +15,8 @@ public class AppServlet extends HttpServlet {
             out.println("<html><body>");
             out.println("<a href=\"SerialGenerator1.1.apk\"><img src=\"downloadArrow.png\"></a>");
             out.println("</body></html>");
+        }else{
+            response.sendRedirect("index.html");
         }
     }
 
