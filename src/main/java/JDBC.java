@@ -1,9 +1,11 @@
 import java.sql.*;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class JDBC {
-
+    public static void main(String[] args) {
+        System.out.println(getDate());
+    }
 
 
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -47,8 +49,10 @@ public class JDBC {
     }
     public static String getDate(){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime dateTime = LocalDateTime.now();
-        String formattedDate = dateTime.format(formatter);
+        Instant now = Instant.now();
+        ZoneId zoneId = ZoneId.of( "Europe/Budapest" );
+        ZonedDateTime zdt = ZonedDateTime.ofInstant( now , zoneId );
+        String formattedDate = zdt.format(formatter);
         return formattedDate;
     }
 }
