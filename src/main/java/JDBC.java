@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class JDBC {
 
@@ -42,5 +44,11 @@ public class JDBC {
             System.out.println(ex);
         }
 
+    }
+    public static String getDate(){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        LocalDateTime dateTime = LocalDateTime.now();
+        String formattedDate = dateTime.format(formatter);
+        return formattedDate;
     }
 }

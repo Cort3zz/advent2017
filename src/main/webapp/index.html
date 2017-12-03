@@ -23,6 +23,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <!--header start here-->
+
+<div class="box">
+    <a class="button" href="downloadApp.jsp"><img src="downloadPic.png" height="40" width="120"></a>
+</div>
 <div class="login-form">
     <div class="top-login">
         <span><img src="group.png" alt=""/></span>
@@ -30,20 +34,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <h1>Login</h1>
     <div class="login-top">
         <form action="/advent" method="post">
-            <p align="center" class="error">Rossz felhasználónév vagy jelszó!</p>
+            <p align="center" class="error">Hány hónapja vagyunk együtt? (Választ számban add meg!)</p>
             <div class="login-ic">
                 <i class="log"></i>
-                <input type="text" name="user" value="Felhasználónév" onfocus="this.value = '';"
-                       onblur="if (this.value == '') {this.value = 'Fel	használónév';}"/>
+                <input type="text" name="user" value="Válasz" onfocus="this.value = '';"
+                       onblur="if (this.value == '') {this.value = 'Válasz';}"/>
                 <div class="clear"></div>
             </div>
-            <div class="login-ic">
+            <div class="copy" lass="login-ic">
                 <i class="icon"></i>
-                <input type="password" name="password" value="Password" onfocus="this.value = '';"
+                <input  type="password" name="password" value="Password" onfocus="this.value = '';"
                        onblur="if (this.value == '') {this.value = 'password';}"/>
                 <div class="clear"></div>
             </div>
-
             <div class="log-bwn">
                 <input type="submit" value="Login">
             </div>
