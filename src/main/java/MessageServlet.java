@@ -78,6 +78,9 @@ public class MessageServlet extends HttpServlet {
 
             if(day==2){
                 request.getRequestDispatcher("/gifts/giftWithPictureDay2.jsp").forward(request, response);
+            } else if (day == 5) {
+                request.getRequestDispatcher("/gifts/giftWithPictureDay5.jsp").forward(request, response);
+
             }
 
             request.setAttribute("dailyMessage", dailyMessage.get(day-1));
