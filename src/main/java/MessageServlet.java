@@ -72,27 +72,35 @@ public class MessageServlet extends HttpServlet {
         String userPassword = request.getParameter("dailypass");
 
         if (dailyPassword.get(day).equals(userPassword)) {
+            JDBC.addLog(""+day,"already_opened");
             JDBC.addLog("" + JDBC.getDate() + "   Somebody tryed to get gift from: " + day + " : SUCCES","dailyCodeLog");
-            response.setContentType("text/html; charset=UTF-8");
-            response.setCharacterEncoding("UTF-8");
 
-            if(day==2){
-                request.getRequestDispatcher("/gifts/giftWithPictureDay2.jsp").forward(request, response);
-            } else if (day == 5) {
-                request.getRequestDispatcher("/gifts/giftWithPictureDay5.jsp").forward(request, response);
+            redirectToGift(request, response, day);
 
-            }
-
-            request.setAttribute("dailyMessage", dailyMessage.get(day-1));
-            request.getRequestDispatcher("/gifts/gift.jsp").include(request, response);
         }else {
             JDBC.addLog("" + JDBC.getDate() + "   Somebody tryed to get gift from: " + day + " : FAILED    The wrong password was: " + userPassword,"dailyCodeLog");
             request.getRequestDispatcher("messageLoginWithError.html").include(request, response);
         }
     }
 
+    public static void redirectToGift(HttpServletRequest request, HttpServletResponse response, int day) throws ServletException, IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        if(day==2){
+            request.getRequestDispatcher("/gifts/giftWithPictureDay2.jsp").forward(request, response);
+        } else if (day == 5) {
+            request.getRequestDispatcher("/gifts/giftWithPictureDay5.jsp").forward(request, response);
+        }
+        request.setAttribute("dailyMessage", dailyMessage.get(day-1));
+        request.getRequestDispatcher("/gifts/gift.jsp").forward(request, response);
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          day = Integer.parseInt(request.getParameter("day"));
+        List<String> days = JDBC.getAllOpenedDay();
+        if (days.contains(String.valueOf(day))) {
+            redirectToGift(request, response, day);
+        }
         request.getRequestDispatcher("messageLogin.html").include(request, response);
     }
 }

@@ -1,6 +1,8 @@
 import java.sql.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JDBC {
 
@@ -44,6 +46,26 @@ public class JDBC {
         }
 
     }
+
+    public static List<String> getAllOpenedDay() {
+        List<String> days = new ArrayList<>();
+        try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+             Statement stmt = conn.createStatement()) {
+            Class.forName(JDBC_DRIVER);
+
+            String sql = "select day from already_opened;";
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                String getName = rs.getString("day");
+                days.add(getName);
+            }
+
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return days;
+    }
+
     public static String getDate(){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         Instant now = Instant.now();
