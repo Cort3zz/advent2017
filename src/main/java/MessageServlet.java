@@ -48,7 +48,7 @@ public class MessageServlet extends HttpServlet {
         dailyMessage.add("<h2>Negyedik üzenet</h2> <p>Az embernek magának kell a párját megteremtenie és nem úgy, hogy a párját erőszakolja önmagához, hanem hogy önmagát alakítja önfeláldozással a párjához. Ez a kölcsönös önfeláldozás: a szerelem.</p>");
         dailyMessage.add("<h2>)Ötödik üzenet</h2> <p>Szeretem a for loopot</p>");
         dailyMessage.add("<h2>Hatodik üzenet</h2> <p>Nekem azok a sikeres meglepetések jutnak eszembe amitől sírva fakadtál. Akkor tudtam, hogy elértem amit akartam. Boldoggá tettelek! :-)</p>");
-        dailyMessage.add("<h2>Hetedik üzenet</h2> <p>Szeretem a for loopot</p>");
+        dailyMessage.add("<h2>Hetedik üzenet</h2> <p>Hát eljött ez a nap is. Megtartod az első beszédedet a parlamentben. És lehet nem az utolsót! Végtelenül büszke vagyok Rád! A suliban már mindenkinek büszkélkedtem Veled! Szeretlek!</p>");
         dailyMessage.add("<h2>Nyolcadik üzenet</h2> <p>Szeretem a for loopot</p>");
         dailyMessage.add("<h2>Kilencedik üzenet</h2> <p>Szeretem a for loopot</p>");
         dailyMessage.add("<h2>Tizedik üzenet</h2> <p>Szeretem a for loopot</p>");
